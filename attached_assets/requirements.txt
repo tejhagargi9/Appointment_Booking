@@ -1,0 +1,77 @@
+Build a small, full-stack appointment booking app:
+Frontend: React (UI for customers to book; UI for client to manage)
+
+Backend: Node/Express (REST API), or language/framework of your choice (bonus for TypeScript or familiar stack)
+
+No auth required. Use in-memory or local file/database for storage.
+
+🚦 Requirements
+
+1. Customer Side
+See available appointment slots for the week.
+
+
+
+Book a single slot (provide name, email, reason).
+
+If slot is taken, prevent double-booking.
+
+Get clear feedback: success or error (slot already booked, missing info).
+
+2. Client Side (Business Admin)
+View all booked appointments.
+
+
+
+Approve or deny each (pending by default).
+
+Denied slots become available for re-booking.
+
+Bonus: Filter by status (pending/approved/denied).
+
+3. Backend API
+Endpoints to list slots, create booking, update booking status.
+
+
+
+Edge cases: return proper error for invalid/missing data, booking conflicts, etc.
+
+⚡ Extra Credit
+Calendar Sync: Simulate sending an email or “calendar invite” (just log to console or render a message).
+
+CSV Export: Button for client to download all bookings as CSV.
+
+Live Updates: Polling or websockets to auto-refresh the list.
+
+Basic tests: One or two test cases for critical API endpoints.
+
+📦 Data Simulation
+Generate a week’s worth of appointment slots (e.g., M-F, 9am–5pm, 30-min intervals) on backend boot, or as a seed script.
+
+Store bookings in memory or (bonus) in a simple local DB (SQLite, JSON, etc).
+
+🧹 Engineering Best Practices
+Git: Commit frequently (each logical unit). Add a clear, brief README:
+
+Project overview
+
+How to run backend & frontend
+
+Sample API calls or demo data
+
+Short note on architecture/structure
+
+Code Structure: Use clear separation (MVC or folders for routes/controllers/services if possible).
+
+Error Handling: Return descriptive errors (status + message).
+
+UI: Focus on clarity and minimalism, not design polish.
+
+🚫 What You DON’T Need
+No authentication.
+
+No payment integrations.
+
+No production database or deployment.
+
+No external APIs required (besides maybe nodemailer for a fake invite).
